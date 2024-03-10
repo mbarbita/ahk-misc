@@ -15,9 +15,9 @@ Return
 ;Send, w
 ;Return
 
-;w::
+;~w::
 ;BlockInput, On
-;Send, we
+;Send, {Ctrl down}q{Ctrl up}
 ;BlockInput, Off
 ;Sleep 400
 ;BlockInput, On

@@ -1,16 +1,6 @@
 #IfWinActive Minecraft
 #KeyHistory, 0
 
-;~$LButton::
-;		Sleep 200
-;    While GetKeyState("LButton", "P"){
-;        Click
-;        Sleep 200  ;  milliseconds
-;    }
-;return
-
-
-
 ;toggle = 0
 ;#MaxThreadsPerHotkey 2
 ;q::
@@ -19,10 +9,13 @@
 ;        Click
 ;        sleep 200
 ;    }
-;Return
+;return
 
-
-
+; q::
+; Click, right
+; Sleep, 299
+; Click, right
+; Return
 
 q::
 Sleep, 200
@@ -31,24 +24,12 @@ KeyWait, q, D
 Send {LButton Up}
 Return
 
-`::
-Click, right
-Return
-
-
-
-
-
-
-
-
-
-
-;q::
-;Click, right
-;Sleep, 299
-;Click, right
-;Return
+;~$LButton::
+;    While GetKeyState("LButton", "P"){
+;        Click
+;        Sleep 100  ;  milliseconds
+;    }
+;return
 
 ;mining
 ;q::
@@ -73,6 +54,24 @@ Return
 ;}
 ;Return
 
+
+;toggle = 0
+;#MaxThreadsPerHotkey 2
+
+;F12::
+;    Toggle := !Toggle
+;     While Toggle{
+;        Click
+;       Send a
+;        sleep 500
+;    }
+;return
+
+
+`::
+Click, right
+Return
+
 F4::
 Send, /
 Sleep, 70
@@ -92,11 +91,6 @@ Return
 ;Send, /shop{Enter}
 ;Return
 
-F6::
-SetKeyDelay, 0, 70
-Send, /warpforge{Enter}
-Return
-
 F7::
 SetKeyDelay, 0, 70
 Send, /effects{Enter}
@@ -115,5 +109,5 @@ Return
 ;Return
 
 #IfWinActive Minecraft
-F12::Suspend
+F10::Suspend
 F11::Reload

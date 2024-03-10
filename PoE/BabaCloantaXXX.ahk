@@ -15,14 +15,16 @@ Return
 ;Send, w
 ;Return
 
-;w::
+w::
 ;BlockInput, On
-;Send, we
+Send, we
+Sleep, 300
+Send, ^e
 ;BlockInput, Off
 ;Sleep 400
 ;BlockInput, On
 ;Send, 6
-;Return
+Return
 
 ;1::
 ;BlockInput, On

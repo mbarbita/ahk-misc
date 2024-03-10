@@ -8,6 +8,17 @@ Send, 12345
 ;Click, right
 Return
 
+e::
+;Send, e
+Send, ^t
+Sleep, 300
+Send, ^w
+;KeyDown := !KeyDown
+;If KeyDown
+;	SendInput {e down}
+;Else
+;	SendInput {e up}
+Return
 
 ;~q::
 ;Sleep 400
@@ -15,14 +26,29 @@ Return
 ;Send, w
 ;Return
 
-;w::
+;Moshu
+;~space & w::
+~w::
+;GetKeyState, sp, space, P
+;	if sp = D
+;	{
+;		BlockInput, On
+;		Send, {space up}
+;		}
+
 ;BlockInput, On
-;Send, we
+;Send, {space up}
+Send, w
+Sleep, 300
+Send, ^r
+Send, e
+Send, ^e
+Sleep, 300
+Send, ^q
+Sleep, 300
+;SendInput {space down}
 ;BlockInput, Off
-;Sleep 400
-;BlockInput, On
-;Send, 6
-;Return
+Return
 
 ;1::
 ;BlockInput, On
@@ -54,7 +80,7 @@ Return
 
 ;4::
 ;BlockInput, On
-;Send, {Ctrl down}e{Ctrl up}
+;Send, 45
 ;Return
 
 F4::
@@ -80,13 +106,14 @@ MouseMove, -20, 0, 50, R
 }
 Return
 
-;F7::
+F7::
 ;loop
 ;{
-;Send, r
-;Sleep, 3000
+;Send, w
+;Sleep, 20000
 ;}
-;Return
+Reload
+Return
 
 ;F7::
 ;SetKeyDelay, 0, 70
@@ -103,7 +130,6 @@ Return
 ;BlockInput, On
 ;Send, t
 ;Return
-
 
 F11::Reload
 F12::Suspend
