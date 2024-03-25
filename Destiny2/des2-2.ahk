@@ -1,6 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 #HotIf WinActive("ahk_class CEFCLIENT") 
-LCtrl::{
+e::{
     Send "{w down}"
     Send "9"
     ; Send "{LShift down}{LShift up}"
